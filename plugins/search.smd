@@ -19,16 +19,16 @@
 
 CURRENTLY RUNNING ON BETA VERSION!!
 *
-   * @project_name : Suhail-Md
-   * @author : Suhail Tech Info
-   * @youtube : https://www.youtube.com/c/@SuhailTechInfo
-   * @description : Suhail-Md ,A Multi-functional whatsapp user bot.
+   * @project_name : wasi-Md
+   * @author : wasi Tech Info
+   * @youtube : https://www.youtube.com/c/@wasiTechInfo
+   * @description : wasi-Md ,A Multi-functional whatsapp user bot.
    * @version 1.2.7
 *
    * Licensed under the  GPL-3.0 License;
 * 
-   * Created By Suhail Tech Info.
-   * © 2023 Suhail-Md.
+   * Created By wasi Tech Info.
+   * © 2023 wasi-Md.
 * 
    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -80,7 +80,7 @@ async(message, match) => {
  try{
 
    message.react("🔍")
-         if (!match) return message.reply(`Give me a user name like ${prefix}github SuhailTechInfo`)
+         if (!match) return message.reply(`Give me a user name like ${prefix}github wasiTechInfo`)
 
          const { data } = await axios(`https://api.github.com/users/${match}`)
    if(!data) return await message.send(`*_Didn't get any results, Provide valid user name!_*`)
@@ -141,7 +141,7 @@ smd({pattern: 'lyrics', alias :['lyric'],category: "search", desc: "Searche lyri
       const res = await ( await fetch(`https://inrl-web.onrender.com/api/lyrics?text=${text}`) ).json();
       if(!res.status) return message.send("*Please Provide valid name!!!*");
       if(!res.result) return message.send("*There's a problem, try again later!*");
-      const { thumb,lyrics,title,artist } = res.result, tbl= "```", tcl ="*", tdl = "_*", contextInfo = { externalAdReply: { ...(await message.bot.contextInfo("𝗦𝗨𝗛𝗔𝗜𝗟-𝗠𝗗",`Lyrics-${text}`))} }
+      const { thumb,lyrics,title,artist } = res.result, tbl= "```", tcl ="*", tdl = "_*", contextInfo = { externalAdReply: { ...(await message.bot.contextInfo("wasi�-𝗠𝗗",`Lyrics-${text}`))} }
   await send(message, `*𝚃𝚒𝚝𝚕𝚎:* ${title}\n*𝙰𝚛𝚝𝚒𝚜𝚝:* ${artist} \n${tbl}${lyrics}${tbl} `,{contextInfo  : contextInfo },"");
 
 }catch(e){return await message.error(`${e}\n\n command: ${cmdName}`,e,`*_Didn't get any lyrics, Sorry!_*`) }
@@ -306,7 +306,7 @@ text +="\n*Match Ended:* " + dat.data[i].matchEnded;
 //---------------------------------------------------------------------------
 smd({
             pattern: "google",
-            alias :['search','gsearch'],
+            alias :['wasi','wasidass'],
             category: "search",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
@@ -314,7 +314,7 @@ smd({
         },
         async(message, text) => {
           try{
-            if (!text) return message.reply(`*_Uhh please, give me a query_*\n*_Example : ${prefix}google Suhail Md._*`);
+            if (!text) return message.reply(`*_Uhh please, give me a query_*\n*_Example : ${prefix}google wasi Md._*`);
             let google = require('google-it');
             google({ 'query': text}).then(res => {
                 let msg= `Google Search From : ${text} \n\n`;
@@ -335,7 +335,7 @@ smd({
     //---------------------------------------------------------------------------
 smd({
             pattern: "image",
-            alias: ["img" , "pic"],
+            alias: ["img" , "waso"],
             category: "search",
             desc: "Searches Image on Google",
             use: '<text>',
@@ -458,14 +458,14 @@ smd({
     //---------------------------------------------------------------------------
 smd({
         pattern: "iswa",
-        alias: ["oldwa","bio","onwa"],
+        alias: ["oldwa","bio","itxxwasi"],
         category: "search",
         desc: "Searches in given rage about given number.",
         use: '9112345678xx',
         filename: __filename,
     },
     async(message, text) => {
- if(!text) return await message.reply('Give Me Number without + sign. Example: .iswa 9231844741xx')
+ if(!text) return await message.reply('Give Me Number without + sign. Example: .iswa 92311578xx')
         var inputnumber = text.split(" ")[0]
         if (!inputnumber.includes('x')) return message.reply(`*You did not add x*\nExample: iswa 9231844741xx  \n ${Config.caption}`)
         message.reply(`*Searching for WhatsApp account in given range...* \n ${Config.caption}`)
